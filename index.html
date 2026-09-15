@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Hub</title>
     <meta name="description" content="A curated collection of my work, experiments, and tools.">
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4F8FFF">
+    <link rel="apple-touch-icon" href="assets/icons/project-hub-icon.svg">
+    
     <link rel="icon" type="image/svg+xml" href="assets/icons/project-hub-icon.svg">
     
     <!-- Google Fonts: Fraunces, Inter, JetBrains Mono -->
@@ -139,5 +145,18 @@
         </div>
     </footer>
 
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.error('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
