@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Hub</title>
+    <meta name="description" content="A curated collection of my work, experiments, and tools.">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/project-hub-icon.svg">
+    
+    <!-- Google Fonts: Fraunces, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="nav-logo">
+                <img src="assets/icons/project-hub-icon.svg" alt="" class="nav-logo-icon" width="20" height="20">
+                <span class="nav-logo-text">Project Hub</span>
+            </a>
+            <nav class="site-nav">
+                <a href="#">Home</a>
+                <a href="#index">The Work</a>
+                <div class="profile-container">
+                    <!-- Note: Source set to profile.jpg. Currently a placeholder until JPG/PNG is uploaded -->
+                    <img src="assets/images/profile.jpg" alt="My Profile" class="header-profile-img">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-title">Archive<br>Of Built<br>Projects</h1>
+                    <div class="hero-meta">
+                        <p class="hero-subtitle">An archive of applications, tools, and digital experiences.</p>
+                    </div>
+                    <a href="#index" class="btn btn-primary">
+                        View Index
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.5 8a.5.5 0 0 1 .5-.5h10.793L9.146 3.854a.5.5 0 1 1 .708-.708l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L12.793 8.5H2a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- The SVG symbol replacing the bleed image -->
+                <div class="hero-visual" aria-hidden="true">
+                    <svg class="ph-symbol" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="ph-core-gradient" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#8B5CF6"/>
+                                <stop offset="1" stop-color="#4F8FFF"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="ph-glow ph-glow-outer" cx="60" cy="60" r="24"/>
+                        <circle class="ph-glow ph-glow-inner" cx="60" cy="60" r="18"/>
+                        <line class="ph-line" data-delay="1" x1="60" y1="60" x2="95" y2="51" stroke="#4F8FFF" stroke-width="1.2"/>
+                        <line class="ph-line" data-delay="2" x1="60" y1="60" x2="60" y2="20" stroke="#8B5CF6" stroke-width="1.2"/>
+                        <line class="ph-line" data-delay="3" x1="60" y1="60" x2="28" y2="48" stroke="#4F8FFF" stroke-width="1.2"/>
+                        <line class="ph-line" data-delay="4" x1="60" y1="60" x2="31" y2="84" stroke="#4F8FFF" stroke-width="1.2"/>
+                        <line class="ph-line" data-delay="5" x1="60" y1="60" x2="78" y2="91" stroke="#4F8FFF" stroke-width="1.2"/>
+                        <line class="ph-line ph-line-secondary" data-delay="6" x1="60" y1="20" x2="95" y2="51" stroke="#4F8FFF" stroke-width="0.9"/>
+                        <line class="ph-line ph-line-secondary" data-delay="6" x1="28" y1="48" x2="31" y2="84" stroke="#4F8FFF" stroke-width="0.9"/>
+                        <circle class="ph-node" data-delay="1" cx="95" cy="51" r="4.5" fill="#4F8FFF"/>
+                        <circle class="ph-node" data-delay="3" cx="28" cy="48" r="4.5" fill="#4F8FFF"/>
+                        <circle class="ph-node" data-delay="4" cx="31" cy="84" r="4.5" fill="#4F8FFF"/>
+                        <circle class="ph-node" data-delay="5" cx="78" cy="91" r="4.5" fill="#4F8FFF"/>
+                        <circle class="ph-node" data-delay="2" cx="60" cy="20" r="5" fill="#8B5CF6"/>
+                        <circle class="ph-core" cx="60" cy="60" r="11" fill="url(#ph-core-gradient)"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="index" class="index-section">
+            <div class="container">
+                
+                <header class="index-header">
+                    <div class="index-heading">
+                        <h2>Index</h2>
+                        <span class="index-count" id="results-count">000</span>
+                    </div>
+
+                    <div class="controls-bar">
+                        <div class="filter-tabs" id="category-filters">
+                            <button class="filter-tab active" data-category="All">All</button>
+                            <button class="filter-tab" data-category="Web">Web</button>
+                            <button class="filter-tab" data-category="App">App</button>
+                            <button class="filter-tab" data-category="AI">AI</button>
+                            <button class="filter-tab" data-category="Tools">Tools</button>
+                            <button class="filter-tab" data-category="Other">Other</button>
+                        </div>
+                        
+                        <div class="search-wrapper">
+                            <button id="search-toggle" aria-label="Toggle search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </button>
+                            <div class="search-input-container">
+                                <input type="text" id="search-input" placeholder="Search index..." aria-label="Search projects">
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="project-grid" id="project-grid">
+                    <!-- Cards will be injected here by JS -->
+                </div>
+
+                <div class="empty-state" id="empty-state" style="display: none;">
+                    <p class="empty-message">No entries match the current criteria.</p>
+                    <button class="btn btn-secondary" id="clear-filters-btn">Clear filters</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span class="logo-text small">Project Hub</span>
+            <p>&copy; <span id="current-year"></span>. All rights reserved.</p>
+            <a href="https://naman9693.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                View Portfolio
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
